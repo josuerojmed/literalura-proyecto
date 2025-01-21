@@ -1,4 +1,4 @@
-package com.alejobeliz.proyectos.literatura.ui;
+package com.sebasmedina.proyectos.literatura.ui;
 
 public class Menu {
     private String menu = """
