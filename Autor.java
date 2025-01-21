@@ -1,8 +1,8 @@
-package com.alejobeliz.proyectos.literatura.model;
+package com.sebasmedina.proyectos.literatura.model;
 
 import jakarta.persistence.*;
-
 import java.util.List;
+
 @Entity
 @Table(name = "autores")
 public class Autor {
@@ -14,15 +14,15 @@ public class Autor {
     private Integer fechaNacimiento;
     private Integer fechaFallecimiento;
     @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Libro>libros;
+    private List<Libro> libros;
 
-    public Autor(AutorRecord autor){
-        this.nombre=autor.nombre();
-        this.fechaNacimiento= autor.fechaNacimiento();
-        this.fechaFallecimiento= autor.fechaFallecimiento();
+    public Autor(AutorRecord autor) {
+        this.nombre = autor.nombre();
+        this.fechaNacimiento = autor.fechaNacimiento();
+        this.fechaFallecimiento = autor.fechaFallecimiento();
     }
 
-    public Autor(){};
+    public Autor() {}
 
     public String getNombre() {
         return nombre;
@@ -68,10 +68,10 @@ public class Autor {
 
     public void imprimirInformacion() {
         System.out.println("*****Autor*****");
-        System.out.println("Nomber:" + nombre);
-        System.out.println("Fecha de nacimiento: "+fechaNacimiento);
-        System.out.println("Fecha de fallecimiento: "+fechaFallecimiento);
-        System.out.println("Libros: "+libros);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Fecha de nacimiento: " + fechaNacimiento);
+        System.out.println("Fecha de fallecimiento: " + fechaFallecimiento);
+        System.out.println("Libros: " + libros);
         System.out.println("");
     }
 }
