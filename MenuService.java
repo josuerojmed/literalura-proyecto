@@ -1,11 +1,11 @@
-package com.alejobeliz.proyectos.literatura.service;
+package com.sebasmedina.proyectos.literatura.service;
 
-import com.alejobeliz.proyectos.literatura.api.PeticionAPI;
-import com.alejobeliz.proyectos.literatura.model.Autor;
-import com.alejobeliz.proyectos.literatura.model.Idioma;
-import com.alejobeliz.proyectos.literatura.model.Libro;
-import com.alejobeliz.proyectos.literatura.model.LibroRecord;
-import com.alejobeliz.proyectos.literatura.util.JsonParser;
+import com.sebasmedina.proyectos.literatura.api.PeticionAPI;
+import com.sebasmedina.proyectos.literatura.model.Autor;
+import com.sebasmedina.proyectos.literatura.model.Idioma;
+import com.sebasmedina.proyectos.literatura.model.Libro;
+import com.sebasmedina.proyectos.literatura.model.LibroRecord;
+import com.sebasmedina.proyectos.literatura.util.JsonParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
