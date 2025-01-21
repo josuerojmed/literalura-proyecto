@@ -1,6 +1,6 @@
-package com.alejobeliz.proyectos.literatura.util;
+package com.sebasmedina.proyectos.literatura.util;
 
-import com.alejobeliz.proyectos.literatura.model.LibroRecord;
+import com.sebasmedina.proyectos.literatura.model.LibroRecord;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,7 +15,6 @@ public class JsonParser {
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
-
     public LibroRecord parsearLibro(String json) {
         try {
             return objectMapper.readValue(json, LibroRecord.class);
@@ -24,11 +23,9 @@ public class JsonParser {
         }
     }
 
-
     public List<LibroRecord> parsearLibros(String json) {
         List<LibroRecord> lista = new ArrayList<>();
         try {
-
             JsonNode jsonObject = objectMapper.readTree(json);
             JsonNode resultados = jsonObject.get("results");
 
