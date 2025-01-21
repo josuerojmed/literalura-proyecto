@@ -1,9 +1,8 @@
-package com.alejobeliz.proyectos.literatura.model;
+package com.sebasmedina.proyectos.literatura.model;
 
 import jakarta.persistence.*;
 
 import java.util.Optional;
-
 
 @Entity
 @Table(name = "libros")
@@ -25,7 +24,6 @@ public class Libro {
         this.numeroDeDescargas = numeroDeDescargas;
     }
 
-
     public Libro(LibroRecord libro) {
         this.titulo = libro.titulo();
 
@@ -40,8 +38,6 @@ public class Libro {
 
     public Libro() {
     }
-
-    ;
 
     public String getTitulo() {
         return titulo;
